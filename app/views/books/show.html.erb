@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p> 
+<strong>Name:</strong>
+<%= @dept.name %>
+
+</p>
+
+<p> 
+<strong>Department:</strong>
+<%= @dept.department %>
+
+</p>
+<p> 
+<strong>Year:</strong>
+<%= @dept.year %>
+
+</p>
+
+
+<%= link_to 'Edit', edit_book_path(@dept) %>
+<%= link_to 'Back', books_path %>

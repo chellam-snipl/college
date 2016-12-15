@@ -1,0 +1,56 @@
+
+<h1>Books Details</h1>
+
+<p id="notice"><%= notice%></p>
+
+<h1> Books</h1>
+
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+
+<table>
+
+<thead>
+<tr>
+	<th>Name</th>
+	
+	<th colspan="5"></th>
+</tr>
+
+</thead>
+
+<tbody>
+	<% @depts.each do |d| %>
+<tr>
+	
+
+	<td><%= d.name %></td>
+	
+	
+	<td><%= link_to 'Show', d %></td>
+	<td><%= link_to 'Edit', edit_book_path(d) %></td>
+	<td><%= link_to 'Destroy', d, method:  :delete, data: { confirm: 'Are you sure'} %></td>
+</tr>
+<% end %>
+</tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Book', new_book_path %>
+
